@@ -1,7 +1,52 @@
-<!DOCTYPE html>
-<head>
-    <title>Home page</title>
-</head>
-<body>
-    <p>Weather app!</p>
-</body>
+<html>
+    <style>
+        body{
+            background-color: lightblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+        h1{
+            color: navy;
+        }
+        nav{
+            background-color: rgb(255, 255, 255);
+            padding:12px;
+            text-align: left;
+        }
+        nav a{
+            margin-left:10px;
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+            }
+        a:hover{
+            text-decoration: underline;
+            color: darkcyan;
+        }
+        .searchbox{
+            text-align: right;
+            border-color: navy;
+            margin-top: -20px;
+        }
+
+    </style>
+    <head>
+        <title>Weather App- Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <body>
+        <nav>
+            <a href="home.html"><i class="fa fa-home"></i> Home </a>
+            <a href="about.html"><i class="fa fa-info-circle"></i> About </a>
+            <a href="contact.html"><i class="fa fa-envelope"></i> Contact</a>
+            <div class="searchbox">
+                <input type="text" placeholder="Search City..." required>
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            </div>
+        </nav>
+        <h1>Welcome to the Weather App</h1>
+
+        <p>Get the latest weather updates for your city.</p>
+        </body>
+</html>
