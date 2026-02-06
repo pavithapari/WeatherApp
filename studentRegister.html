@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Student-Registration
+    </title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .split{
+            display: flex;
+            
+        }
+        .right{
+            
+            flex:1;
+            background-color: whitesmoke;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left{
+            flex:1;
+            background-color:#2266EE;
+        }
+        @media (max-width: 768px) {
+        .left {
+            display: none;
+        }
+        }
+        .form-box{
+            padding: 20px;
+            margin: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:1.5rem;
+        }
+        .field{
+            display: flex;
+            flex-direction: column;
+            gap:12px;
+        }
+
+        .full {
+            grid-column: span 2;
+        }
+
+        .field input,select{
+            padding: 12px;
+        }
+
+        
+        
+        input ,select{
+            border-width: 2px;
+            border-style: solid;
+            border-color: grey;
+            padding:8px;
+            border-radius: 8px;
+        }
+
+        button.submit{
+        background-color:rgb(108, 108, 227);
+        color:white;
+        border:none;
+        font-weight:bold;
+        border-radius:30px;
+        height:40px;
+        font-size: 15px;
+        cursor:pointer;
+        margin-left:8px;
+         }
+
+        button:hover{
+            opacity: 0.9;
+        }
+
+
+    </style>
+    </head>
+    <body style="margin: 0;">
+        <div class="split">
+            <div class="left"></div>
+            <div class="right">
+
+        <form class="form-box">
+        <div class="field full" style="text-align: center;padding: 0;">
+            <h1 style="margin-bottom: 0;">Student-Registration</h1>
+            <p style="margin:0;">Create your Student Account</p>
+        </div>
+        <div class="field full">
+            <label>Full Name</label>
+            <input type="text" placeholder="Amy Farah Fowler">
+        </div>
+
+        <div class="field">
+            <label>Email</label>
+            <input type="email">
+        </div>
+
+        <div class="field">
+            <label>Phone</label>
+            <input type="tel">
+        </div>
+        <div class="field full">
+            <label>Date of birth</label>
+            <input type="date">
+        </div>
+
+        <div class="field full">
+            <label>Gender</label>
+            <div style="display: inline; align-items: baseline;">
+            <label>
+            <input type="radio" value="Male" name="gender">Male</label>
+            <label>
+            <input type="radio" name="gender" value="Female">Female</label>
+            <label>
+            <input type="radio" name="gender" value="Not Mention">Prefer not to say
+            </label>
+            </div>
+        </div>
+
+        <div class="field full">
+            <label>Address</label>
+            <textarea rows="4" placeholder="Enter your full address"></textarea>
+        </div>
+        <div class="field full">
+
+        <label for="college">College Name</label>
+        <input list="collegeList" id="college" placeholder="Start typing your college">
+
+        <datalist id="collegeList">
+        <option value="Indian Institute of Technology Madras">
+        <option value="Indian Institute of Technology Bombay">
+        <option value="Anna University">
+        <option value="National Institute of Technology Trichy">
+        <option value="Vellore Institute of Technology">
+        <option value="Thiagarajar College of Enginnering"></option>
+        </datalist>
+        </div>
+        <div class="field">
+            <label for="course">Course Type</label>
+            <select id="course">
+            <option value="">-- Select Course --</option>
+            <option value="BE">B.E</option>
+            <option value="BTech">B.Tech</option>
+            <option value="ME">M.E</option>
+            <option value="MTech">M.Tech</option>
+            <option value="MBA">MBA</option>
+            </select>
+
+        </div>
+        <div class="field">
+            <label for="course">Specialization</label>
+            <select id="course">
+            <option value="">-- Select Branch --</option>
+            <option value="CSE">Computer Science</option>
+            <option value="ECE">Electronics</option>
+            <option value="EEE">Electrical</option>
+            <option value="MECH">Mechanical</option>
+            <option value="CIVIL">Civil</option>
+        </select>
+
+        </div>
+
+        <div class="field">
+            <label>Password</label>
+            <input type="password" placeholder="Fowler">
+        </div>
+
+        <div class="field">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Fowler">
+        </div>
+
+        <div class="field full">
+            <label>Confirm Password</label>
+            <input type="file" placeholder="Fowler" accept=".pdf,.docx,.jpeg">
+        </div>
+            <div class="field full">
+                <button class="submit"> Register as a student</button>
+            </div>
+            <div class="field full" style="text-align: center;">
+                <span style="color:grey;">Already have an account?</span>
+                <a href="login.html">Login Here</a>
+            </div>
+
+        </div>
+
+
+
+        </div>
+        </form>
+
+            </div>
+        </div>
+    </body>
+</html>
