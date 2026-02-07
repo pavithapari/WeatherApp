@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <title>
+
+        Admin-Registration
+    </title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .split{
+            display: flex;
+            
+        }
+        .right{
+            
+            flex:1;
+            background-color: whitesmoke;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .left{
+            flex:1;
+            background-color:#001f3f;
+            display: flex;
+            padding-left: 30px;
+            align-items: start;
+            flex-direction: column;
+            justify-content: center;
+            color:white;
+        }
+        @media (max-width: 768px) {
+        .left {
+            display: none;
+        }
+        }
+        .form-box{
+            padding: 20px;
+            margin: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap:1.5rem;
+        }
+        .field{
+            display: flex;
+            flex-direction: column;
+            gap:12px;
+        }
+
+        .full {
+            grid-column: span 2;
+        }
+
+        .field input,select{
+            padding: 12px;
+        }
+
+        
+        
+        input ,select{
+            border-width: 2px;
+            border-style: solid;
+            border-color: grey;
+            padding:8px;
+            border-radius: 8px;
+        }
+
+        button.submit{
+        background-color:#001f3f;
+        color:white;
+        border:none;
+        font-weight:bold;
+        border-radius:30px;
+        height:40px;
+        font-size: 15px;
+        cursor:pointer;
+        margin-left:8px;
+         }
+
+        button:hover{
+            opacity: 0.9;
+        }
+
+
+    </style>
+    </head>
+    <body style="margin: 0;">
+        <div class="split">
+            <div class="left">
+                <img src="assests/sc.png" width=80% style="margin-bottom: 10px;">
+                
+                    <i class="fa-solid fa-file-shield" style="color:white;font-size: 60px;"></i>
+                    <h1 style="margin-top: 0;">Admin-Registration</h1>
+                    <p><em>Register as an administartor to manage scholarship appications</em></p>
+            </div>
+            <div class="right">
+
+        <form class="form-box">
+        <div class="field full" style="text-align: center;padding: 0;">
+            <h1 style="margin-bottom: 0;">Admin-Registration</h1>
+            <p style="margin:0;">Create your Admin Account</p>
+        </div>
+        <div class="field full">
+            <label>Full Name</label>
+            <input type="text" placeholder="Amy Farah Fowler">
+        </div>
+
+        <div class="field full">
+            <label>Email</label>
+            <input type="email">
+        </div>
+
+        <div class="field">
+            <label>Employee Id</label>
+            <input type="text">
+        </div>
+
+        <div class="field">
+            <label>Department</label>
+            <input type="text">
+        </div>
+
+
+        <div class="field full">
+            <label>Gender</label>
+            <div style="display: inline; align-items: baseline;">
+            <label>
+            <input type="radio" value="Male" name="gender">Male</label>
+            <label>
+            <input type="radio" name="gender" value="Female">Female</label>
+            <label>
+            <input type="radio" name="gender" value="Not Mention">Prefer not to say
+            </label>
+            </div>
+        </div>
+
+        <div class="field full">
+            <label for="role">Role</label>
+            <select id="role">
+                <option>--Select your Role--</option>
+                <option>Moderator</option>
+                <option>Approvar</option>
+                <option>Ultimate Approvar</option>
+            </select>
+        
+        </div>
+
+
+
+        <div class="field">
+            <label>Password</label>
+            <input type="password" placeholder="Fowler">
+        </div>
+
+        <div class="field">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Fowler">
+        </div>
+
+        <div class="field full">
+            <label>ID Proof (allowed: pdf, png, jpg.)</label>
+            <input type="file" placeholder="Fowler" accept=".pdf,.docx,.jpeg">
+        </div>
+            <div class="field full">
+                <button class="submit"> Register as a Admin</button>
+            </div>
+            <div class="field full" style="text-align: center;">
+                <span style="color:grey;">Already have an account?</span>
+                <a href="login.html">Login Here</a>
+            </div>
+
+        </div>
+
+
+
+        </div>
+        </form>
+
+            </div>
+        </div>
+    </body>
+</html>
