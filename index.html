@@ -14,6 +14,18 @@
                 font-size: 24px;
 
             }
+            .register-select {
+               
+                border:none;
+                border-radius: 5px;
+                background-color: white;
+                color: rgb(0, 0, 238);
+                font-size: 14px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+
             nav{
                 top:0;
                 justify-content: space-between;
@@ -28,7 +40,7 @@
             .links{
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: baseline;
                 gap:1.5rem;
 
             }
@@ -64,6 +76,11 @@
             text-decoration: none;
         }
 
+        .logo:hover{
+            cursor: pointer;
+            color: #007BFF;
+        }
+
         /* Solid blue button style */
         .btn-login {
             background-color: #007BFF; /* Blue color */
@@ -92,6 +109,12 @@
             gap: 50px;
             margin:50px;
         }
+        @media  (max-width: 768px) {
+                .logo i {
+                    display: none;
+                }
+            }
+        
         </style>
 
     </head>
@@ -103,10 +126,14 @@
                 <span>ScholarHub</span>
             </div>
             <div class="links">
-                <a href="about.html">About</a>
+                <a href="studentRegister.html">About</a>
                 <a href="home.html">Contact</a>
-                <a href="login.html">Login</a>
-                <a href="studentRegister.html" style="color:blue;">Register</a>
+                <a href="dashboard.html">Login</a>
+                    <select id="lis" class="register-select">
+                        <option value="">Register as</option>
+                        <option value="student">Student</option>
+                        <option value="admin">Admin</a></option>
+                    </select>
             </div>
         </nav>
         <div class="text">
@@ -116,12 +143,10 @@
             <p style="color:rgb(75, 73, 73);font-size: 18px;">Discover thousands of Scholarships tailor to your academic acheiveents,intersts, and goals. Start your journey towards a bigger future today.</p>
         </div>
         <div class="button-container">
-    <!-- Solid Blue Login Button -->
     <a href="#" class="btn btn-login">Login</a>
-    <!-- Blue Outline Sign Up Button -->
     <a href="#" class="btn btn-signup">Sign Up</a>
     </div>
-    <marquee>
+    <marnquee>
         <div class="points">
             
             <p style="color:rgb(75, 73, 73); font-weight: bold;"><i class="fa-solid fa-check" style="color:blue"></i> 10,000+ Scholarships</p>
@@ -142,4 +167,20 @@
         </div>
     </footer>
     </body>
+    <script>
+        let lis=document.getElementById("lis");
+        lis.addEventListener("change",function(){
+            let value=lis.value;
+            if(value=='student'){
+                window.location.href='studentRegister.html'
+            }
+            else{
+                window.location.href='AdminRegistration.html'
+            }
+        })
+        window.addEventListener( "load",function() {
+            document.getElementById("lis").value = ""; 
+        }
+    )
+    </script>
 </html>
